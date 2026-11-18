@@ -8,9 +8,11 @@
 
 ## What makes this game different?
 
-- **Choices are the core mechanic:** Good and bad decisions affect moral progression, abilities, NPCs, quests, and the world.
-- **Survive and craft:** Gather, build, eat, drink, explore, and make hard tradeoffs. More systems are planned.
-- **Interact broadly:** Pick up and manipulate world objects; search containers that may be empty; take or steal items and face consequences.
+- **Interconnected moral progression is the core mechanic:** Quests, skills, abilities, and honor shape each other. Your choices influence which skills and specializations become available; your developed skills open new quest resolutions; the world remembers the results.
+- **Learn by doing:** Develop individual skills through meaningful practice, training, and quests. Moral choices influence specialized progression, while neutral paths stay viable.
+- **Survive and build:** Gather resources, craft equipment, construct shelter, eat, drink, explore, and make difficult tradeoffs. More systems are planned.
+- **Interact broadly:** Explore detailed environments, use objects, search containers that may be empty, take or steal items, and experience ownership and social consequences.
+- **Branching quests:** Resolve problems through dialogue, developed skills, exploration, crafting, or confrontation; outcomes affect future gameplay.
 - **Choose your perspective:** First person by default, with third person available.
 - **Help build it:** Code, art, writing, music, level design, accessibility, testing, and feedback are all welcome.
 
@@ -53,6 +55,6 @@ A Kickstarter is **planned for consideration after a credible playable vertical 
 2. Replace string-only inventory with reusable item, container, ownership, and transfer data.
 3. Implement an inventory UI, dropping and placing items.
 4. Separate honor, reputation, and NPC witnessing of theft.
-5. Add working survival/crafting systems and exclusive moral abilities.
+5. Prototype a quest where honor, trained skills, and exclusive abilities influence each other.
 
 **Want to help?** Browse [Issues](../../issues), submit a proposal, or open a pull request. Every contribution helps us turn the vision into a game.
