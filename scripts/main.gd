@@ -5,6 +5,7 @@ const WALK_SPEED := 5.0
 var player: CharacterBody3D
 var pivot: Node3D
 var camera: Camera3D
+var player_visual: Node3D
 var hud: Label
 var third_person := false
 var inventory: Array[String] = []
@@ -80,6 +81,30 @@ func _make_player() -> void:
     capsule.radius = .35
     collision.shape = capsule
     player.add_child(collision)
+    # Placeholder avatar for third-person view. The collision body alone is invisible.
+    player_visual = Node3D.new()
+    player_visual.name = "PlayerVisual"
+    player.add_child(player_visual)
+    var torso := MeshInstance3D.new()
+    torso.name = "Body"
+    var torso_mesh := CapsuleMesh.new()
+    torso_mesh.radius = 0.32
+    torso_mesh.height = 1.5
+    torso.mesh = torso_mesh
+    var body_mat := StandardMaterial3D.new()
+    body_mat.albedo_color = Color(0.12, 0.65, 0.8)
+    torso.material_override = body_mat
+    player_visual.add_child(torso)
+    var facing := MeshInstance3D.new()
+    facing.name = "FacingMarker"
+    var facing_mesh := BoxMesh.new()
+    facing_mesh.size = Vector3(0.24, 0.24, 0.12)
+    facing.mesh = facing_mesh
+    facing.position = Vector3(0, 0.25, -0.32)
+    var facing_mat := StandardMaterial3D.new()
+    facing_mat.albedo_color = Color(1.0, 0.75, 0.16)
+    facing.material_override = facing_mat
+    player_visual.add_child(facing)
     pivot = Node3D.new()
     pivot.position.y = .65
     player.add_child(pivot)
@@ -102,6 +127,7 @@ func _make_ui() -> void:
     layer.add_child(crosshair)
 
 func _update_camera() -> void:
+    player_visual.visible = third_person
     if third_person:
         camera.position = Vector3(0,.7,3.7)
     else:
