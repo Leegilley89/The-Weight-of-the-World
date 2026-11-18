@@ -20,6 +20,15 @@ Milestones indicate scope, not promised release dates.
 - [ ] Save/load basic player state
 - [ ] Publish testing notes and reproducible build
 
+## Cross-system design milestone — signature gameplay loop
+- [ ] Specify skill categories and independent progression rules
+- [ ] Build a quest with at least three skill-supported resolutions
+- [ ] Ensure quest choices affect honor and future skill/ability access
+- [ ] Add one skill specialization gated by both proficiency and moral record
+- [ ] Track a delayed NPC/world consequence from a player choice
+- [ ] Test an honorable, dishonorable and neutral route without soft-locking survival
+- [ ] Write contributor templates for quest-to-skill-to-honor integration
+
 ## Milestone 2 — World simulation
 NPC routines, witnesses, faction reactions, shelters, weather, persistence, and expandible region design.
 
